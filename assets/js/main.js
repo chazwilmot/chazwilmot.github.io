@@ -156,7 +156,6 @@ const translations = {
         
         // About Section
         'about-title': 'About Me',
-        'about-content': 'I graduated from The University of Iowa, College of Engineering, with a major in Computer Science and Engineering. This summer, I joined the United States Space Force at Los Angeles Air Force Base as an intern and began my graduate studies at the University of Virginia.',
         
         // Experience Section
         'experience-title': 'Professional Experience',
@@ -191,7 +190,6 @@ const translations = {
         
         // About Section
         'about-title': 'Sobre Mí',
-        'about-content': 'Me gradué de la Universidad de Iowa, Facultad de Ingeniería, con especialización en Ciencias de la Computación e Ingeniería. Este verano, me uní a la Fuerza Espacial de los Estados Unidos en la Base de la Fuerza Aérea de Los Ángeles como pasante y comencé mis estudios de posgrado en la Universidad de Virginia.',
         
         // Experience Section
         'experience-title': 'Experiencia Profesional',
@@ -213,13 +211,49 @@ const translations = {
     }
 };
 
+// Typing Animation
+let typingText;
+let cursor;
+
+function type(text) {
+    if (!typingText || !cursor) return;
+    
+    // Reset text and index
+    let index = 0;
+    typingText.textContent = '';
+
+    function typeChar() {
+        if (index < text.length) {
+            typingText.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeChar, 100);
+        } else {
+            cursor.style.animation = 'none';
+            setTimeout(() => {
+                cursor.style.animation = 'blink 1s infinite';
+            }, 10);
+        }
+    }
+
+    // Start typing animation after a short delay
+    setTimeout(typeChar, 500);
+}
+
+function initTypingAnimation() {
+    typingText = document.querySelector('.typing-text-content');
+    cursor = document.querySelector('.typing-cursor');
+    if (typingText && cursor) {
+        type(translations[currentLanguage]['hero-title']);
+    }
+}
+
 // Language toggle functionality
 const languageToggle = document.getElementById('language-toggle');
 const flagIcon = document.querySelector('.flag-icon');
-let currentLang = 'en';
+let currentLanguage = 'en';
 
 function updateLanguage(lang) {
-    currentLang = lang;
+    currentLanguage = lang;
     const translation = translations[lang];
     
     // Update all translatable elements
@@ -233,15 +267,21 @@ function updateLanguage(lang) {
     // Update flag
     flagIcon.src = `assets/images/flags/${lang === 'en' ? 'us' : 'mx'}.svg`;
     flagIcon.alt = lang === 'en' ? 'English' : 'Español';
+
+    // Trigger typing animation with new language
+    type(translations[lang]['hero-title']);
 }
 
-languageToggle.addEventListener('click', () => {
-    const newLang = currentLang === 'en' ? 'es' : 'en';
-    updateLanguage(newLang);
+// Initialize with English
+document.addEventListener('DOMContentLoaded', () => {
+    initTypingAnimation();
+    updateLanguage('en');
 });
 
-// Initialize with English
-updateLanguage('en');
+languageToggle.addEventListener('click', () => {
+    const newLang = currentLanguage === 'en' ? 'es' : 'en';
+    updateLanguage(newLang);
+});
 
 // Color Theme Switcher
 document.addEventListener('DOMContentLoaded', () => {
@@ -291,31 +331,4 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ensure color theme persists
         root.setAttribute('data-color', currentColor);
     });
-});
-
-// Typing Animation
-function initTypingAnimation() {
-    const text = "Hi, I'm Charles Wilmot";
-    const typingText = document.querySelector('.typing-text-content');
-    const cursor = document.querySelector('.typing-cursor');
-    let index = 0;
-
-    // Clear any existing text
-    typingText.textContent = '';
-
-    function type() {
-        if (index < text.length) {
-            typingText.textContent += text.charAt(index);
-            index++;
-            setTimeout(type, 100);
-        } else {
-            cursor.style.animation = 'none';
-            setTimeout(() => {
-                cursor.style.animation = 'blink 1s infinite';
-            }, 10);
-        }
-    }
-
-    // Start typing animation after a short delay
-    setTimeout(type, 500);
-} 
+}); 

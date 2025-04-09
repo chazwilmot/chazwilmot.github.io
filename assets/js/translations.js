@@ -1,0 +1,42 @@
+const translations = {
+    en: {
+        "nav-home": "Home",
+        "nav-about": "About",
+        "nav-education": "Education",
+        "nav-experience": "Experience",
+        "nav-portfolio": "Portfolio",
+        "nav-contact": "Contact",
+        "hero-title": "Hi, I'm Charles Wilmot",
+        "hero-subtitle": "Engineer | Entrepreneur | Leader",
+        "about-title": "About Me",
+        "education-title": "Education",
+        "experience-title": "Professional Experience",
+        "portfolio-title": "Portfolio",
+        "contact-title": "Contact",
+        "contact-form-name": "Name",
+        "contact-form-email": "Email",
+        "contact-form-message": "Message",
+        "contact-form-submit": "Send Message",
+        "footer-copyright": "© 2024 Charles Wilmot. All rights reserved."
+    },
+    es: {
+        "nav-home": "Inicio",
+        "nav-about": "Sobre Mí",
+        "nav-education": "Educación",
+        "nav-experience": "Experiencia",
+        "nav-portfolio": "Portafolio",
+        "nav-contact": "Contacto",
+        "hero-title": "Hola, soy Charles Wilmot",
+        "hero-subtitle": "Ingeniero | Emprendedor | Líder",
+        "about-title": "Sobre Mí",
+        "education-title": "Educación",
+        "experience-title": "Experiencia Profesional",
+        "portfolio-title": "Portafolio",
+        "contact-title": "Contacto",
+        "contact-form-name": "Nombre",
+        "contact-form-email": "Correo Electrónico",
+        "contact-form-message": "Mensaje",
+        "contact-form-submit": "Enviar Mensaje",
+        "footer-copyright": "© 2024 Charles Wilmot. Todos los derechos reservados."
+    }
+}; 

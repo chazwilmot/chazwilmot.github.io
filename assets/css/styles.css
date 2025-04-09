@@ -617,8 +617,45 @@ input:checked + .slider i {
 }
 
 .contact-item i {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.contact-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: rgba(37, 99, 235, 0.05);
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+    background: rgba(37, 99, 235, 0.1);
+    transform: translateY(-2px);
+}
+
+[data-theme="dark"] .contact-item a {
+    color: var(--text-color);
+    background: rgba(37, 99, 235, 0.15);
+    font-weight: 600;
+}
+
+[data-theme="dark"] .contact-item a:hover {
+    color: var(--primary-color);
+    background: rgba(37, 99, 235, 0.25);
+    transform: translateY(-2px);
+}
+
+.contact-item a:hover i {
+    transform: scale(1.1);
 }
 
 .contact-form {
@@ -1028,4 +1065,41 @@ input:checked + .slider i {
     input:checked + .slider:before {
         transform: translateX(22px);
     }
+}
+
+.language-switch {
+    margin-left: 1rem;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-btn:hover {
+    background: rgba(37, 99, 235, 0.1);
+    transform: scale(1.1);
+}
+
+.flag-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.lang-btn:hover .flag-icon {
+    transform: scale(1.1);
+}
+
+[data-theme="dark"] .lang-btn:hover {
+    background: rgba(37, 99, 235, 0.2);
 } 

@@ -136,4 +136,108 @@ if (filterButtons.length && portfolioItems.length) {
             });
         });
     });
-} 
+}
+
+// Translation data
+const translations = {
+    en: {
+        // Navigation
+        'nav-home': 'Home',
+        'nav-about': 'About',
+        'nav-experience': 'Experience',
+        'nav-education': 'Education',
+        'nav-portfolio': 'Portfolio',
+        'nav-contact': 'Contact',
+        
+        // Hero Section
+        'hero-title': 'Hi, I\'m Charles Wilmot',
+        'hero-subtitle': 'Engineer | Entrepreneur | Leader',
+        
+        // About Section
+        'about-title': 'About Me',
+        'about-content': 'I graduated from The University of Iowa, College of Engineering, with a major in Computer Science and Engineering. This summer, I joined the United States Space Force at Los Angeles Air Force Base as an intern and began my graduate studies at the University of Virginia.',
+        
+        // Experience Section
+        'experience-title': 'Professional Experience',
+        'show-more': 'Show More',
+        'show-less': 'Show Less',
+        
+        // Education Section
+        'education-title': 'Education',
+        
+        // Portfolio Section
+        'portfolio-title': 'Portfolio',
+        
+        // Contact Section
+        'contact-title': 'Contact Me',
+        'contact-email': 'Email',
+        'contact-linkedin': 'LinkedIn',
+        'contact-github': 'GitHub',
+        'contact-resume': 'Download Resume'
+    },
+    es: {
+        // Navigation
+        'nav-home': 'Inicio',
+        'nav-about': 'Sobre Mí',
+        'nav-experience': 'Experiencia',
+        'nav-education': 'Educación',
+        'nav-portfolio': 'Portafolio',
+        'nav-contact': 'Contacto',
+        
+        // Hero Section
+        'hero-title': 'Hola, soy Charles Wilmot',
+        'hero-subtitle': 'Ingeniero | Emprendedor | Líder',
+        
+        // About Section
+        'about-title': 'Sobre Mí',
+        'about-content': 'Me gradué de la Universidad de Iowa, Facultad de Ingeniería, con especialización en Ciencias de la Computación e Ingeniería. Este verano, me uní a la Fuerza Espacial de los Estados Unidos en la Base de la Fuerza Aérea de Los Ángeles como pasante y comencé mis estudios de posgrado en la Universidad de Virginia.',
+        
+        // Experience Section
+        'experience-title': 'Experiencia Profesional',
+        'show-more': 'Mostrar Más',
+        'show-less': 'Mostrar Menos',
+        
+        // Education Section
+        'education-title': 'Educación',
+        
+        // Portfolio Section
+        'portfolio-title': 'Portafolio',
+        
+        // Contact Section
+        'contact-title': 'Contáctame',
+        'contact-email': 'Correo',
+        'contact-linkedin': 'LinkedIn',
+        'contact-github': 'GitHub',
+        'contact-resume': 'Descargar CV'
+    }
+};
+
+// Language toggle functionality
+const languageToggle = document.getElementById('language-toggle');
+const flagIcon = document.querySelector('.flag-icon');
+let currentLang = 'en';
+
+function updateLanguage(lang) {
+    currentLang = lang;
+    const translation = translations[lang];
+    
+    // Update all translatable elements
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translation[key]) {
+            element.textContent = translation[key];
+        }
+    });
+    
+    // Update flag
+    flagIcon.src = `assets/images/flags/${lang === 'en' ? 'us' : 'mx'}.svg`;
+    flagIcon.alt = lang === 'en' ? 'English' : 'Español';
+}
+
+languageToggle.addEventListener('click', () => {
+    const newLang = currentLang === 'en' ? 'es' : 'en';
+    updateLanguage(newLang);
+});
+
+// Initialize with English
+updateLanguage('en'); 

@@ -145,9 +145,9 @@ html {
 }
 
 .container {
-    max-width: 972px; /* Reduced from 1080px */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.62rem; /* Reduced from 1.8rem */
+    padding: 0 2rem;
 }
 
 /* Typography */
@@ -370,11 +370,15 @@ input:checked + .slider i {
 
 /* Sections */
 .section {
-    padding: 4.05rem 0; /* Reduced from 4.5rem */
+    padding: 5rem 0;
+    background: var(--bg-color);
 }
 
-.section:nth-child(even) {
-    background-color: var(--section-bg);
+.section h2 {
+    font-size: 2.025rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 3rem;
 }
 
 /* About Section */
@@ -617,8 +621,8 @@ input:checked + .slider i {
 
 /* Portfolio Section */
 .portfolio-section {
-    background-color: var(--section-bg);
     padding: 5rem 0;
+    background: var(--bg-color);
 }
 
 .portfolio-filters {
@@ -851,39 +855,54 @@ input:checked + .slider i {
 
 .form-group {
     position: relative;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--text-color);
-    font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    margin-bottom: 1.5rem;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0.9rem; /* Reduced from 1rem */
+    padding: 1rem 1.5rem;
     border: 2px solid var(--border-color);
-    border-radius: 8px;
-    background: var(--background-color);
+    border-radius: 1rem;
+    background: var(--bg-color);
     color: var(--text-color);
-    font-size: 1rem;
     transition: all 0.3s ease;
+    font-size: 1rem;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.1);
+.form-group input {
+    height: 3.5rem;
 }
 
 .form-group textarea {
     min-height: 150px;
     resize: vertical;
+    padding-top: 1rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+    opacity: 0.5;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 0;
 }
 
 .submit-btn {
@@ -1149,8 +1168,8 @@ input:checked + .slider i {
 
 /* Experience Section */
 .experience-section {
-    background-color: var(--section-bg);
     padding: 5rem 0;
+    background: var(--bg-color);
 }
 
 .experience-timeline {
@@ -2103,5 +2122,241 @@ input:checked + .slider i {
     
     .goal-content h3 {
         font-size: 1.3rem;
+    }
+}
+
+/* Entrepreneurial Spirit Section */
+.entrepreneurial-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.entrepreneurial-card {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.entrepreneurial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+.entrepreneurial-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+.entrepreneurial-card:hover .entrepreneurial-icon {
+    transform: scale(1.1);
+}
+
+.entrepreneurial-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.entrepreneurial-text p {
+    color: var(--text-color);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.entrepreneurial-form {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid var(--border-color);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form-header h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-header p {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 1.1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 0;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 1rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-group input {
+    height: 3.5rem;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+    padding-top: 1rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+    opacity: 0.5;
+}
+
+.entrepreneurial-form .btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+}
+
+.entrepreneurial-form .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.3);
+}
+
+.entrepreneurial-form .btn i {
+    transition: transform 0.3s ease;
+}
+
+.entrepreneurial-form .btn:hover i {
+    transform: translateX(5px);
+}
+
+[data-theme="dark"] .entrepreneurial-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .entrepreneurial-form {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .entrepreneurial-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .entrepreneurial-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .entrepreneurial-form {
+        padding: 2rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section-header {
+    text-align: left;
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+}
+
+.section-header h2 {
+    font-size: 2.025rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+/* Experience Section */
+.experience-section {
+    padding: 5rem 0;
+    background: var(--bg-color);
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 5rem 0;
+    background: var(--bg-color);
+}
+
+/* Education Section */
+#education.section {
+    padding: 5rem 0;
+    background: var(--bg-color);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
     }
 } 

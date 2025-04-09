@@ -151,7 +151,7 @@ const translations = {
         'nav-contact': 'Contact',
         
         // Hero Section
-        'hero-title': 'Hi, I\'m Charles Wilmot',
+        'hero-title': 'Hi, I\'m Charles Wilmot II',
         'hero-subtitle': 'Engineer | Entrepreneur | Leader',
         
         // About Section
@@ -185,7 +185,7 @@ const translations = {
         'nav-contact': 'Contacto',
         
         // Hero Section
-        'hero-title': 'Hola, soy Charles Wilmot',
+        'hero-title': 'Hola, soy Charles Wilmot II',
         'hero-subtitle': 'Ingeniero | Emprendedor | Líder',
         
         // About Section

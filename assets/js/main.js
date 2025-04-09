@@ -214,20 +214,29 @@ const translations = {
 // Typing Animation
 let typingText;
 let cursor;
+let isTyping = false;
+let currentTimeout;
 
 function type(text) {
-    if (!typingText || !cursor) return;
+    if (!typingText || !cursor || isTyping) return;
     
+    isTyping = true;
     // Reset text and index
     let index = 0;
     typingText.textContent = '';
+
+    // Clear any existing timeout
+    if (currentTimeout) {
+        clearTimeout(currentTimeout);
+    }
 
     function typeChar() {
         if (index < text.length) {
             typingText.textContent += text.charAt(index);
             index++;
-            setTimeout(typeChar, 100);
+            currentTimeout = setTimeout(typeChar, 100);
         } else {
+            isTyping = false;
             cursor.style.animation = 'none';
             setTimeout(() => {
                 cursor.style.animation = 'blink 1s infinite';
@@ -236,13 +245,15 @@ function type(text) {
     }
 
     // Start typing animation after a short delay
-    setTimeout(typeChar, 500);
+    currentTimeout = setTimeout(typeChar, 500);
 }
 
 function initTypingAnimation() {
     typingText = document.querySelector('.typing-text-content');
     cursor = document.querySelector('.typing-cursor');
     if (typingText && cursor) {
+        // Clear any existing content
+        typingText.textContent = '';
         type(translations[currentLanguage]['hero-title']);
     }
 }

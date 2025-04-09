@@ -242,19 +242,52 @@ languageToggle.addEventListener('click', () => {
 // Initialize with English
 updateLanguage('en');
 
-// Experience Show More Functionality
-const experienceShowMoreBtn = document.querySelector('.experience-section .show-more-btn');
-const experienceHiddenItems = document.querySelector('.experience-section .experience-hidden');
+// Color Theme Switcher
+document.addEventListener('DOMContentLoaded', () => {
+    const colorOptions = document.querySelectorAll('.color-option');
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
 
-if (experienceShowMoreBtn && experienceHiddenItems) {
-    experienceShowMoreBtn.addEventListener('click', () => {
-        experienceHiddenItems.classList.toggle('show');
-        experienceShowMoreBtn.classList.toggle('active');
-        
-        if (experienceHiddenItems.classList.contains('show')) {
-            experienceShowMoreBtn.innerHTML = 'Show Less <i class="fas fa-chevron-up"></i>';
+    // Load saved color theme
+    const savedColor = localStorage.getItem('color-theme') || 'default';
+    root.setAttribute('data-color', savedColor);
+    
+    // Update active state of color options
+    colorOptions.forEach(option => {
+        if (option.getAttribute('data-color') === savedColor) {
+            option.classList.add('active');
         } else {
-            experienceShowMoreBtn.innerHTML = 'Show More <i class="fas fa-chevron-down"></i>';
+            option.classList.remove('active');
         }
     });
-} 
+
+    // Handle color theme changes
+    colorOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const color = option.getAttribute('data-color');
+            
+            // Update active state
+            colorOptions.forEach(opt => opt.classList.remove('active'));
+            option.classList.add('active');
+            
+            // Set color theme
+            root.setAttribute('data-color', color);
+            
+            // Save preference
+            localStorage.setItem('color-theme', color);
+        });
+    });
+
+    // Handle dark mode toggle
+    themeToggle.addEventListener('change', function() {
+        const isDark = this.checked;
+        const theme = isDark ? 'dark' : 'light';
+        const currentColor = root.getAttribute('data-color') || 'default';
+        
+        root.setAttribute('data-theme', isDark ? 'dark' : '');
+        localStorage.setItem('theme', theme);
+        
+        // Ensure color theme persists
+        root.setAttribute('data-color', currentColor);
+    });
+}); 

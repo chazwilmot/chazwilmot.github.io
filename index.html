@@ -1,136 +1,928 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title></title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles Wilmot | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80' font-family='Inter'>🚀</text></svg>">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#home">Charles Wilmot</a>
+            </div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-right">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round">
+                        <i class="fas fa-lightbulb"></i>
+                    </span>
+                </label>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Charles Wilmot</h1>
+            <p class="subtitle">Systems Engineer | Software Developer</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn primary">Get in Touch</a>
+                <a href="#portfolio" class="btn secondary">View My Work</a>
+            </div>
+        </div>
+    </section>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-					</header>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="profile-image-container">
+                    <img src="assets/images/profile/headshot.jpg" alt="Charles Wilmot">
+                </div>
+                <div class="about-text">
+                    <p>As a Systems Engineer with a passion for space technology and innovation, I bridge the gap between complex technical challenges and practical solutions. Currently pursuing my Master's in Systems Engineering at UVA while serving as a DoD SMART Scholar for the US Space Force, I bring a unique blend of academic excellence and hands-on experience in space systems, software development, and project management.</p>
+                    <div class="skills">
+                        <h3>Core Competencies</h3>
+                        <div class="skill-tags">
+                            <span><i class="fas fa-rocket"></i>&nbsp; Space Systems</span>
+                            <span><i class="fas fa-code"></i>&nbsp; Software Development</span>
+                            <span><i class="fas fa-project-diagram"></i>&nbsp; Systems Engineering</span>
+                            <span><i class="fas fa-tasks"></i>&nbsp; Project Management</span>
+                            <span><i class="fas fa-brain"></i>&nbsp; Machine Learning</span>
+                            <span><i class="fas fa-users"></i>&nbsp; Team Leadership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>My name is Charles Wilmot</h1>
-							</header>
-							<div class="content">
-								<p>Showcase of my education, experiences, skills, projects, resume, and more</p>
-							</div>
-						</div>
-					</section>
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-timeline">
+                <!-- Brown University -->
+                <div class="education-item">
+                    <div class="education-logo">
+                        <img src="assets/images/education/brown-logo.png" alt="Brown University Logo">
+                    </div>
+                    <div class="education-content">
+                        <h3>Brown University</h3>
+                        <p class="degree">MS in Technology Leadership MBA</p>
+                        <p class="year">2025 - 2026</p>
+                        <div class="oxford-cert">
+                            <img src="assets/images/education/oxford-logo.png" alt="Oxford University Logo" class="oxford-logo">
+                            <div class="oxford-details">
+                                <p class="oxford-title">Oxford's Saïd Business School</p>
+                                <p class="oxford-name">Oxford Cyber Security for Business Leaders Programme Certificate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-				<!-- Main -->
-					<div id="main">
+                <!-- University of Virginia -->
+                <div class="education-item">
+                    <div class="education-logo">
+                        <img src="assets/images/education/uva-logo.png" alt="University of Virginia Logo">
+                    </div>
+                    <div class="education-content">
+                        <h3>University of Virginia</h3>
+                        <p class="degree">ME in Systems Engineering</p>
+                        <p class="year">2024 - 2025</p>
+                    </div>
+                </div>
 
-						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="education.html" class="link">Education</a></h3>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="experiences.html" class="link">Experiences</a></h3>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="skills.html" class="link">Skills</a></h3>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="projects.html" class="link">Projects</a></h3>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="resume.html" class="link">Resume</a></h3>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="other.html" class="link">Other</a></h3>									</header>
-								</article>
-							</section>
+                <!-- University of Iowa -->
+                <div class="education-item">
+                    <div class="education-logo">
+                        <img src="assets/images/education/iowa-logo.png" alt="University of Iowa Logo">
+                    </div>
+                    <div class="education-content">
+                        <h3>University of Iowa</h3>
+                        <p class="degree">BSE in Computer Science and Engineering</p>
+                        <p class="year">2020 - 2024</p>
+                    </div>
+                </div>
 
-						<!-- Two -->
-							<section id="two">
-								<div class="inner">
-									<header class="major">
-										<h2>Summary</h2>
-									</header>
-									<p>As a tech-savvy individual with a passion for programming, the business side of technology, and real estate investment, I bring a unique blend of skills and experiences to the table. With a strong foundation in C++, Java, and Python, as well as experience with MATLAB, Micro-cap, Arduino, Verilog, SQL, HTML, CSS, Haskell, Agda, and more, I am well-equipped to tackle complex technical challenges.
-										In addition to my technical skills, I have honed a diverse range of leadership, communication, organizational, and teamwork skills through my experiences as an Eagle Scout, systems engineer intern with Launch Enterprise at Space Systems Command, university researcher, club volleyball team captain/vice president, treasurer of Focus First HOA, member of the Association for Computing Machinery and College of Business Real Estate Club, mentor and community volunteer, summer-camp counselor, and tech support analyst.
-										My interests span a range of exciting and emerging fields, including space, machine learning, artificial intelligence, software development, and real estate. I am always eager to explore new opportunities and gain new experiences that will help me grow both personally and professionally.</p>
-								</div>
-							</section>
-					</div>
+                <!-- Loyola High School -->
+                <div class="education-item">
+                    <div class="education-logo">
+                        <img src="assets/images/education/loyola-logo.png" alt="Loyola High School Logo">
+                    </div>
+                    <div class="education-content">
+                        <h3>Loyola High School</h3>
+                        <p class="year">2016 - 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<!-- Contact -->
-					<section id="contact">
-							<section>
-								<div class="contact-method">
-									<span class="icon solid alt fa-envelope"></span>
-									<h3>Email</h3>
-									<a>CharlesDWilmot@proton.me</a>
-								</div>
-							</section>
-							<style>
-								#contact {
-								  width: 80%;
-								  margin: 0 auto;
-								}
-							  </style>
-					</section>
+    <!-- Experience Section -->
+    <section class="experience-section">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <!-- First 6 visible items -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Graduate Researcher</h3>
+                        <div class="company">UVA Systems Engineering</div>
+                        <div class="duration">
+                            <i class="far fa-calendar-alt"></i>
+                            Aug 2024 - Present
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Charlottesville, VA
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <ul class="responsibilities">
+                            <li>Systems Engineering Research</li>
+                            <li>Focus on advanced systems modeling</li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span class="experience-tag">Systems Engineering</span>
+                            <span class="experience-tag">Research</span>
+                            <span class="experience-tag">Academia</span>
+                        </div>
+                    </div>
+                </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://github.com/chazwilmot/chazwilmot" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/charles-wilmot-ii-240a931b4/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-						</div>
-					</footer>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>DoD SMART Scholar</h3>
+                        <div class="company">US Space Force</div>
+                        <div class="duration">
+                            <i class="far fa-calendar-alt"></i>
+                            Apr 2021 - Present
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Alexandria, VA
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <ul class="responsibilities">
+                            <li>Phase I awardee for academic excellence</li>
+                            <li>Selected by US Space Force</li>
+                            <li>Los Angeles AFB sponsorship</li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span class="experience-tag">Defense</span>
+                            <span class="experience-tag">Space Force</span>
+                            <span class="experience-tag">STEM</span>
+                        </div>
+                    </div>
+                </div>
 
-			</div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Eagle Scout</h3>
+                        <div class="company">Boy Scouts of America</div>
+                        <div class="duration">
+                            <i class="far fa-calendar-alt"></i>
+                            Jan 2018 - Present
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Various Locations
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <ul class="responsibilities">
+                            <li>Leadership and teamwork</li>
+                            <li>Community service projects</li>
+                            <li>Scoutmaster's Award recipient</li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span class="experience-tag">Leadership</span>
+                            <span class="experience-tag">Community Service</span>
+                            <span class="experience-tag">Scouting</span>
+                        </div>
+                    </div>
+                </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-	</body>
-</html>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Space Systems Command 2024</h3>
+                        <div class="company">Space Systems Command</div>
+                        <div class="duration">
+                            <i class="far fa-calendar-alt"></i>
+                            May 2024 - Aug 2024
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            El Segundo, CA
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <ul class="responsibilities">
+                            <li>Assured Access to Space Engineering</li>
+                            <li>ManTech Systems Engineering</li>
+                            <li>Space Systems Analysis</li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span class="experience-tag">Space Systems</span>
+                            <span class="experience-tag">Engineering</span>
+                            <span class="experience-tag">Defense</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>ML/AI Engineering Researcher</h3>
+                        <div class="company">UI Physics & Astronomy</div>
+                        <div class="duration">
+                            <i class="far fa-calendar-alt"></i>
+                            Feb 2023 - Oct 2023
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Iowa City, IA
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <ul class="responsibilities">
+                            <li>Developed ML/AI algorithms for NASA TRACER mission</li>
+                            <li>Magnetometer calibration optimization</li>
+                            <li>Data processing and analysis</li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span class="experience-tag">Machine Learning</span>
+                            <span class="experience-tag">NASA</span>
+                            <span class="experience-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>United States Space Force</h3>
+                        <div class="company">US Space Force</div>
+                        <div class="duration">
+                            <i class="far fa-calendar-alt"></i>
+                            Apr 2021 - Present
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Various Locations
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <ul class="responsibilities">
+                            <li>Service member</li>
+                            <li>Space Force training and education</li>
+                            <li>Mission support and execution</li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span class="experience-tag">Defense</span>
+                            <span class="experience-tag">Space Force</span>
+                            <span class="experience-tag">Military</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hidden items -->
+                <div class="experience-hidden">
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>Laboratory Research Assistant</h3>
+                            <div class="company">UI Engineering</div>
+                            <div class="duration">
+                                <i class="far fa-calendar-alt"></i>
+                                Oct 2022 - Jun 2023
+                            </div>
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Iowa City, IA
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <ul class="responsibilities">
+                                <li>Machine learning research in Intelligent Systems Lab</li>
+                                <li>Data analysis for medical research</li>
+                                <li>Python-based ML implementation</li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="experience-tag">Machine Learning</span>
+                                <span class="experience-tag">Research</span>
+                                <span class="experience-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>Treasurer</h3>
+                            <div class="company">Focus First HOA</div>
+                            <div class="duration">
+                                <i class="far fa-calendar-alt"></i>
+                                Aug 2022 - Present
+                            </div>
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Iowa City, IA
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <ul class="responsibilities">
+                                <li>Financial management and planning</li>
+                                <li>Budget oversight and reporting</li>
+                                <li>Strategic financial decision-making</li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="experience-tag">Finance</span>
+                                <span class="experience-tag">Leadership</span>
+                                <span class="experience-tag">Management</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>United States Department of Defense</h3>
+                            <div class="company">US Department of Defense</div>
+                            <div class="duration">
+                                <i class="far fa-calendar-alt"></i>
+                                May 2022 - Aug 2022
+                            </div>
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                El Segundo, CA
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <ul class="responsibilities">
+                                <li>Launch Enterprise Engineering support</li>
+                                <li>Program and product development</li>
+                                <li>Systems analysis and integration</li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="experience-tag">Defense</span>
+                                <span class="experience-tag">Engineering</span>
+                                <span class="experience-tag">Systems</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>Camp Counselor / Waterfront Director</h3>
+                            <div class="company">Gold Arrow Camp</div>
+                            <div class="duration">
+                                <i class="far fa-calendar-alt"></i>
+                                Jun 2021 - Aug 2021
+                            </div>
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Huntington Lake, CA
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <ul class="responsibilities">
+                                <li>Led waterfront activities and safety</li>
+                                <li>Managed team of counselors</li>
+                                <li>Youth development and mentoring</li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="experience-tag">Leadership</span>
+                                <span class="experience-tag">Management</span>
+                                <span class="experience-tag">Safety</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>Information Technology Analyst</h3>
+                            <div class="company">University of Iowa</div>
+                            <div class="duration">
+                                <i class="far fa-calendar-alt"></i>
+                                Feb 2021 - May 2021
+                            </div>
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Iowa City, IA
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <ul class="responsibilities">
+                                <li>Technical support and troubleshooting</li>
+                                <li>System maintenance and documentation</li>
+                                <li>User training and assistance</li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="experience-tag">IT Support</span>
+                                <span class="experience-tag">Technical</span>
+                                <span class="experience-tag">Service</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>Junior Counselor</h3>
+                            <div class="company">Gold Arrow Camp</div>
+                            <div class="duration">
+                                <i class="far fa-calendar-alt"></i>
+                                Jun 2020 - Aug 2020
+                            </div>
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Huntington Lake, CA
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <ul class="responsibilities">
+                                <li>Counseling and mentoring younger campers</li>
+                                <li>Leadership and teamwork</li>
+                                <li>Outdoor activities and safety</li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="experience-tag">Leadership</span>
+                                <span class="experience-tag">Counseling</span>
+                                <span class="experience-tag">Outdoor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-more-container">
+                <button class="show-more-btn">
+                    Show More <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section portfolio-section">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <!-- First 6 items shown by default -->
+                <!-- UVA Projects -->
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Autonomous Obstacle Avoidance</h3>
+                            <span class="date">Nov 2024 - Present</span>
+                            <span class="institution">University of Virginia</span>
+                        </div>
+                        <p>Developed an autonomous navigation algorithm using Python and ROS2, enabling a TurtleBot equipped with LiDAR to move toward a target while avoiding obstacles.</p>
+                        <div class="tech-stack">
+                            <span>ROS2</span>
+                            <span>Python</span>
+                            <span>Robotics</span>
+                            <span>LiDAR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Multi-Agent Robotic System (MAHRS)</h3>
+                            <span class="date">Nov 2024 - Dec 2024</span>
+                            <span class="institution">University of Virginia</span>
+                        </div>
+                        <p>Collaborative system between Crazyflie quadrotor and TurtleBot for ground hazard detection and avoidance using advanced computer vision.</p>
+                        <div class="tech-stack">
+                            <span>ROS2</span>
+                            <span>Python</span>
+                            <span>YOLOv8</span>
+                            <span>Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>UI/UX Design For Autonomous Robots</h3>
+                            <span class="date">Aug 2024 - Present</span>
+                            <span class="institution">UVA Systems Engineering</span>
+                        </div>
+                        <p>Research and design project focused on enhancing user interfaces for autonomous robots, bridging the gap between complex systems and end-users.</p>
+                        <div class="tech-stack">
+                            <span>UI/UX</span>
+                            <span>Figma</span>
+                            <span>Human-Robot Interaction</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Magna International Kiosk</h3>
+                            <span class="date">Jan 2024 - May 2024</span>
+                            <span class="institution">University of Iowa</span>
+                        </div>
+                        <p>Full-stack kiosk application for employee management and internal operations, including vacation requests and work orders.</p>
+                        <div class="tech-stack">
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                            <span>HTML/CSS/JS</span>
+                            <span>Heroku</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Rocket Sync & Launch Telemetry Analysis</h3>
+                            <span class="date">Jan 2024 - May 2024</span>
+                            <span class="institution">University of Iowa</span>
+                        </div>
+                        <p>Developed a sensor suite module for model rockets with iOS app integration and remote launch capabilities.</p>
+                        <div class="tech-stack">
+                            <span>iOS</span>
+                            <span>C/C++</span>
+                            <span>Electronics</span>
+                            <span>3D Printing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <h3>Smart Sport Monitor (SSM)</h3>
+                            <span class="date">Jan 2024 - May 2024</span>
+                            <span class="institution">University of Iowa</span>
+                        </div>
+                        <p>Automated scoring system for table-top sports with real-time analytics and replay capabilities.</p>
+                        <div class="tech-stack">
+                            <span>IoT</span>
+                            <span>Firebase</span>
+                            <span>Python</span>
+                            <span>Swift</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hidden Items -->
+                <div class="portfolio-hidden">
+                    <!-- Rest of the portfolio items -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>SMR Feasibility Study</h3>
+                                <span class="date">Nov 2024 - Present</span>
+                                <span class="institution">University of Virginia</span>
+                            </div>
+                            <p>Comprehensive analysis of Small Modular Reactor implementation for sustainable server farm operations.</p>
+                            <div class="tech-stack">
+                                <span>Systems Engineering</span>
+                                <span>Financial Analysis</span>
+                                <span>Sustainability</span>
+                                <span>Economics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>Mathematical Programming Model Analysis</h3>
+                                <span class="date">Nov 2024 - Present</span>
+                                <span class="institution">University of Virginia</span>
+                            </div>
+                            <p>Implementation and analysis of mathematical programming models using AMPL, focusing on optimization and algorithm development.</p>
+                            <div class="tech-stack">
+                                <span>AMPL</span>
+                                <span>Python</span>
+                                <span>Algorithms</span>
+                                <span>Data Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>Real Time Multi Core CPU Monitoring</h3>
+                                <span class="date">Apr 2024</span>
+                                <span class="institution">University of Iowa</span>
+                            </div>
+                            <p>System for monitoring and visualizing CPU usage across multiple cores in real-time using Python and MQTT.</p>
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>MQTT</span>
+                                <span>InfluxDB</span>
+                                <span>Raspberry Pi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>BLE Environmental Monitoring</h3>
+                                <span class="date">Mar 2024</span>
+                                <span class="institution">University of Iowa</span>
+                            </div>
+                            <p>Implementation of BLE communication between Arduino and Raspberry Pi for environmental data collection.</p>
+                            <div class="tech-stack">
+                                <span>BLE</span>
+                                <span>Arduino</span>
+                                <span>Raspberry Pi</span>
+                                <span>Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>Community Alert System</h3>
+                                <span class="date">Nov 2023 - Dec 2023</span>
+                                <span class="institution">University of Iowa</span>
+                            </div>
+                            <p>Distributed alert system using TCP sockets for reliable community-wide notifications.</p>
+                            <div class="tech-stack">
+                                <span>Java</span>
+                                <span>TCP/IP</span>
+                                <span>Networking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>Modern Database Spotify Project</h3>
+                                <span class="date">Nov 2023 - Dec 2023</span>
+                                <span class="institution">University of Iowa</span>
+                            </div>
+                            <p>Song recommender system using Neo4j and PostgreSQL with fuzzy search capabilities.</p>
+                            <div class="tech-stack">
+                                <span>Neo4j</span>
+                                <span>PostgreSQL</span>
+                                <span>Python</span>
+                                <span>Algorithms</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>Sell Nest Marketplace</h3>
+                                <span class="date">Oct 2023 - Dec 2023</span>
+                                <span class="institution">University of Iowa</span>
+                            </div>
+                            <p>Ruby on Rails SaaS marketplace application for buying and selling goods.</p>
+                            <div class="tech-stack">
+                                <span>Ruby on Rails</span>
+                                <span>SaaS</span>
+                                <span>Heroku</span>
+                                <span>HTML/CSS/JS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>UI/UX Portfolio Website</h3>
+                                <span class="date">Oct 2023 - Nov 2023</span>
+                                <span class="institution">University of Iowa</span>
+                            </div>
+                            <p>Team and individual portfolio website showcasing UI/UX design principles.</p>
+                            <div class="tech-stack">
+                                <span>UI/UX</span>
+                                <span>Ruby on Rails</span>
+                                <span>HTML/CSS/JS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>Electric Eye Safety System</h3>
+                                <span class="date">Sep 2023 - Oct 2023</span>
+                                <span class="institution">University of Iowa</span>
+                            </div>
+                            <p>Light beam interrupter safety system with SMS notifications.</p>
+                            <div class="tech-stack">
+                                <span>Electronics</span>
+                                <span>Python</span>
+                                <span>3D Printing</span>
+                                <span>Circuit Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>IoT Thermometer</h3>
+                                <span class="date">Aug 2023 - Sep 2023</span>
+                                <span class="institution">University of Iowa</span>
+                            </div>
+                            <p>Connected thermometer with real-time monitoring and web interface for data visualization.</p>
+                            <div class="tech-stack">
+                                <span>IoT</span>
+                                <span>C</span>
+                                <span>Java</span>
+                                <span>Web Dev</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>Environmental Sensor</h3>
+                                <span class="date">Apr 2023 - May 2023</span>
+                                <span class="institution">University of Iowa</span>
+                            </div>
+                            <p>Multi-parameter environmental sensor with LCD interface and unit conversion.</p>
+                            <div class="tech-stack">
+                                <span>C</span>
+                                <span>ATmega328p</span>
+                                <span>Electronics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>LCD Library in C</h3>
+                                <span class="date">Apr 2023 - May 2023</span>
+                                <span class="institution">University of Iowa</span>
+                            </div>
+                            <p>Enhanced LCD library for HD44780 controller supporting 2x16 displays.</p>
+                            <div class="tech-stack">
+                                <span>C</span>
+                                <span>Embedded</span>
+                                <span>Hardware</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>Model Selection Optimization</h3>
+                                <span class="date">Jan 2023 - May 2023</span>
+                                <span class="institution">University of Iowa</span>
+                            </div>
+                            <p>Research on optimizing model selection for low variability datasets with imbalanced dependent variables.</p>
+                            <div class="tech-stack">
+                                <span>Machine Learning</span>
+                                <span>Python</span>
+                                <span>Statistics</span>
+                                <span>AI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>Sorting Network</h3>
+                                <span class="date">Apr 2023 - May 2023</span>
+                                <span class="institution">University of Iowa</span>
+                            </div>
+                            <p>Implementation of sorting networks with parallel processing capabilities in Haskell.</p>
+                            <div class="tech-stack">
+                                <span>Haskell</span>
+                                <span>Algorithms</span>
+                                <span>Data Structures</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>Word Game Tournament</h3>
+                                <span class="date">Dec 2022</span>
+                                <span class="institution">University of Iowa</span>
+                            </div>
+                            <p>48-hour hackathon project: Networked word game with multithreading and GUI.</p>
+                            <div class="tech-stack">
+                                <span>Java</span>
+                                <span>JavaFX</span>
+                                <span>Networking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <h3>Verilog Finite State Machine</h3>
+                                <span class="date">Dec 2022</span>
+                                <span class="institution">University of Iowa</span>
+                            </div>
+                            <p>Implementation of a sequence detector using Verilog and finite state machines.</p>
+                            <div class="tech-stack">
+                                <span>Verilog</span>
+                                <span>Logic Design</span>
+                                <span>FSM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Show More Button -->
+            <div class="show-more-container">
+                <button class="show-more-btn">
+                    Show More <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section">
+        <div class="container">
+            <h2>Resume</h2>
+            <div class="resume-content">
+                <p class="resume-intro">View my complete professional background and qualifications:</p>
+                <a href="assets/files/charles_wilmot_resume.pdf" class="btn primary" download>
+                    <i class="fas fa-file-download"></i>&nbsp; Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:CharlesDWilmot@proton.me">CharlesDWilmot@proton.me</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/charles-wilmot-ii-240a931b4/" target="_blank">LinkedIn Profile</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/chazwilmot" target="_blank">GitHub Profile</a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Charles Wilmot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 

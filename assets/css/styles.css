@@ -960,6 +960,7 @@ input:checked + .slider i {
     position: relative;
     overflow: hidden;
     border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
 }
 
 .experience-item:hover {
@@ -970,6 +971,8 @@ input:checked + .slider i {
 
 .experience-header {
     margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .experience-header h3 {
@@ -989,11 +992,12 @@ input:checked + .slider i {
 .experience-header .date {
     color: var(--text-secondary);
     font-size: 0.95rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
 .responsibilities {
     margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
 }
 
 .responsibilities li {
@@ -1001,7 +1005,7 @@ input:checked + .slider i {
     margin-bottom: 0.75rem;
     line-height: 1.6;
     position: relative;
-    padding-left: 1.5rem;
+    list-style-type: none;
 }
 
 .responsibilities li::before {
@@ -1009,7 +1013,7 @@ input:checked + .slider i {
     color: var(--primary-color);
     font-weight: bold;
     position: absolute;
-    left: 0;
+    left: -1.5rem;
 }
 
 .experience-tags {
@@ -1017,6 +1021,8 @@ input:checked + .slider i {
     flex-wrap: wrap;
     gap: 0.75rem;
     margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
 }
 
 .experience-tag {
@@ -1041,22 +1047,12 @@ input:checked + .slider i {
     border-color: var(--border-color);
 }
 
-[data-theme="dark"] .experience-header h3 {
-    color: var(--primary-color);
+[data-theme="dark"] .experience-header {
+    border-bottom-color: var(--border-color);
 }
 
-[data-theme="dark"] .experience-header .company {
-    color: var(--text-color);
-}
-
-[data-theme="dark"] .experience-tag {
-    background: var(--tag-bg);
-    color: var(--primary-color);
-}
-
-[data-theme="dark"] .experience-tag:hover {
-    background: var(--primary-color);
-    color: white;
+[data-theme="dark"] .experience-tags {
+    border-top-color: var(--border-color);
 }
 
 .experience-hidden {

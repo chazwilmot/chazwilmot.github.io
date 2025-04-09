@@ -240,4 +240,21 @@ languageToggle.addEventListener('click', () => {
 });
 
 // Initialize with English
-updateLanguage('en'); 
+updateLanguage('en');
+
+// Experience Show More Functionality
+const experienceShowMoreBtn = document.querySelector('.experience-section .show-more-btn');
+const experienceHiddenItems = document.querySelector('.experience-section .experience-hidden');
+
+if (experienceShowMoreBtn && experienceHiddenItems) {
+    experienceShowMoreBtn.addEventListener('click', () => {
+        experienceHiddenItems.classList.toggle('show');
+        experienceShowMoreBtn.classList.toggle('active');
+        
+        if (experienceHiddenItems.classList.contains('show')) {
+            experienceShowMoreBtn.innerHTML = 'Show Less <i class="fas fa-chevron-up"></i>';
+        } else {
+            experienceShowMoreBtn.innerHTML = 'Show More <i class="fas fa-chevron-down"></i>';
+        }
+    });
+} 

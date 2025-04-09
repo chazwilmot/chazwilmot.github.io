@@ -832,13 +832,16 @@ input:checked + .slider i {
 
 .experience-item {
     background: var(--card-bg);
-    border-radius: 1.5rem;
-    padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 24px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .experience-item::before {
@@ -846,88 +849,303 @@ input:checked + .slider i {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    border-radius: 4px;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .experience-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item:hover::before {
+    opacity: 1;
+}
+
+.experience-header {
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.experience-header h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.company {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.duration, .location {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-right: 16px;
+}
+
+.duration i, .location i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.responsibilities {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+}
+
+.responsibilities li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.responsibilities li::before {
+    content: '•';
+    position: absolute;
+    left: 8px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.experience-tag {
+    background: rgba(0, 123, 255, 0.1);
+    color: var(--primary-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.experience-tag:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
 }
 
 .experience-hidden {
     display: none;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
     grid-column: 1 / -1;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
 .experience-hidden.show {
     display: grid;
-    opacity: 1;
-    transform: translateY(0);
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .show-more-container {
     text-align: center;
     margin-top: 2rem;
-    padding-top: 2rem;
-    position: relative;
     grid-column: 1 / -1;
-    transition: all 0.3s ease;
-}
-
-.show-more-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    border-radius: 2px;
 }
 
 .show-more-btn {
-    background: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 0.75rem 2rem;
-    border-radius: 2rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
     cursor: pointer;
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 500;
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    position: relative;
-    overflow: hidden;
+    gap: 8px;
 }
 
 .show-more-btn:hover {
-    background: var(--primary-color);
-    color: white;
+    background: var(--secondary-color);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
 .show-more-btn i {
     transition: transform 0.3s ease;
-    display: inline-block;
-    width: 1em;
-    text-align: center;
-    transform-origin: center;
 }
 
 .show-more-btn.active i {
     transform: rotate(180deg);
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] .experience-item {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .experience-tag {
+    background: rgba(0, 123, 255, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .experience-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-hidden.show {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-item {
+        padding: 20px;
+    }
+
+    .experience-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .company {
+        font-size: 1rem;
+    }
+}
+
+/* Resume Download Section */
+.resume-download {
+    text-align: center;
+    margin: 40px 0;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.1) 0%, rgba(0, 123, 255, 0.05) 100%);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.resume-download::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23007bff" fill-opacity="0.05" d="M0 0h100v100H0z"/></svg>');
+    opacity: 0.5;
+}
+
+.resume-download h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.resume-download p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.download-btn:hover::before {
+    transform: translateX(100%);
+}
+
+.download-btn i {
+    font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .experience-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-item {
+        padding: 20px;
+    }
+
+    .experience-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .company {
+        font-size: 1rem;
+    }
+
+    .resume-download {
+        padding: 30px 20px;
+    }
+
+    .resume-download h2 {
+        font-size: 1.8rem;
+    }
+
+    .resume-download p {
+        font-size: 1rem;
+    }
+
+    .download-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
 }
 
 /* Responsive Design */

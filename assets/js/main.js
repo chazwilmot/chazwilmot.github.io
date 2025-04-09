@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hero) {
         hero.classList.add('visible');
     }
+    initTypingAnimation();
 });
 
 // Portfolio Filtering
@@ -290,4 +291,31 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ensure color theme persists
         root.setAttribute('data-color', currentColor);
     });
-}); 
+});
+
+// Typing Animation
+function initTypingAnimation() {
+    const text = "Hi, I'm Charles Wilmot";
+    const typingText = document.querySelector('.typing-text-content');
+    const cursor = document.querySelector('.typing-cursor');
+    let index = 0;
+
+    // Clear any existing text
+    typingText.textContent = '';
+
+    function type() {
+        if (index < text.length) {
+            typingText.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 100);
+        } else {
+            cursor.style.animation = 'none';
+            setTimeout(() => {
+                cursor.style.animation = 'blink 1s infinite';
+            }, 10);
+        }
+    }
+
+    // Start typing animation after a short delay
+    setTimeout(type, 500);
+} 

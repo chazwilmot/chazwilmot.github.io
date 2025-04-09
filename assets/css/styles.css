@@ -509,6 +509,77 @@ input:checked + .slider i {
     box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
 }
 
+/* Resume Download Section */
+.resume-download {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--background-color);
+    margin: 2rem 0;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-color-dark));
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, var(--primary-color-dark), var(--primary-color));
+}
+
+.download-btn:active {
+    transform: translateY(1px);
+}
+
+.download-btn i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.download-btn:hover i {
+    transform: translateY(-2px);
+}
+
+.download-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.download-btn:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .download-btn {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .download-btn:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
 /* Portfolio Section */
 .portfolio-section {
     background-color: var(--section-bg);
@@ -1375,5 +1446,71 @@ input:checked + .slider i {
     .color-option {
         width: 28px;
         height: 28px;
+    }
+}
+
+/* Typing Animation */
+.typing-text {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    color: white;
+}
+
+.typing-text-content {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: typing 1.5s forwards;
+    color: white;
+}
+
+.typing-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: white;
+    margin-left: 2px;
+    animation: blink 1s infinite;
+    vertical-align: middle;
+}
+
+@keyframes typing {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Hero Section Adjustments */
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
     }
 } 
